@@ -6,9 +6,6 @@
   align-items: center;
 }
 
-.header__nav {
-}
-
 .header__nav-list {
   display: flex;
   justify-content: start;
@@ -17,6 +14,7 @@
 }
 
 .header__nav-item {
+  position: relative;
 }
 
 .header__nav-link {
@@ -32,6 +30,20 @@
 
 .header__nav-link:focus-visible {
   outline: 2px solid var(--co-dark-green);
+}
+
+.header__nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 100%;
+  bottom: -8px;
+  height: 2px;
+  background-color: var(--co-dark-green);
+  transition: right 0.22s;
+}
+.header__nav-link:hover::after {
+  right: 0;
 }
 
 .header__actions {

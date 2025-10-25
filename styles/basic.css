@@ -19,6 +19,23 @@ a {
   color: unset;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+figure {
+  margin: 0;
+}
+
 .container {
   max-width: 1400px;
   padding: 0 10px;
@@ -48,6 +65,7 @@ a {
 .btn:focus-visible {
   outline: 2px solid var(--co-dark-green);
   cursor: pointer;
+  transition: outline 0.04s;
 }
 
 .btn--signin {
